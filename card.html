@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         /*====================================================
+--<	Techno Flipbox Area Css -->
+======================================================*/
+         .techno_flipbox_font {
+            border: 1px solid #0c5adb;
+            border-radius: 8px;
+         }
+         .flipbox .section_main_title h1 {
+            color: black;
+         }
+         .flipbox .section_sub_title h6 {
+            color: black;
+         }
+         .flipbox .section_title {
+            margin-bottom: 30px;
+         }
+         .techno_flipbox {
+            perspective: 1000px;
+            position: relative;
+            transform-style: preserve-3d;
+            -webkit-perspective: 1000px;
+            -webkit-transform-style: preserve-3d;
+            z-index: 1;
+         }
+         .techno_flipbox .techno_flipbox_font,
+         .techno_flipbox .techno_flipbox_back {
+            min-height: 250px;
+            height: auto;
+            box-shadow: 0px 1px 51.3px 5.7px rgba(137, 143, 156, 0.15);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            transform: rotateX(0);
+            -webkit-transform: rotateX(0);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            transition: transform 0.7s ease, -webkit-transform 0.7s ease;
+            position: relative;
+         }
+         .techno_flipbox .techno_flipbox_back::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent -80%, #00247e);
+         }
+         .icon {
+            font-size: 45px;
+            line-height: 45px;
+         }
+         .techno_flipbox .techno_flipbox_inner {
+            text-align: center;
+            padding: 0 25px;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            perspective: inherit;
+            -webkit-perspective: inherit;
+            outline: transparent solid 1px;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+            z-index: 2;
+         }
+         .techno_flipbox_icon {
+            font-size: 45px;
+            text-align: center;
+            display: inline-block;
+            color: black;
+            overflow: hidden;
+         }
+         .techno_flipbox_font .flipbox_desc p {
+            color: black;
+         }
+         .techno_flipbox .flipbox_title h3 {
+            font-size: 22px;
+            padding-bottom: 13px;
+            text-transform: capitalize;
+            -webkit-transition: all 0.7s ease 0s;
+            transition: all 0.7s ease 0s;
+            color: black;
+         }
+         .techno_flipbox .techno_flipbox_back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-radius: 2px;
+            -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+         }
+         .techno_flipbox .techno_flipbox_back .flipbox_button a {
+            text-transform: capitalize;
+            margin-top: 22px;
+            background: black;
+            color: #0c5adb;
+            display: inline-block;
+            padding: 4px 25px;
+            border-radius: 5px;
+            border: 2px solid black;
+            transition: 0.5s;
+         }
+         .techno_flipbox_back .flipbox_desc p {
+            color: black;
+         }
+         .techno_flipbox .techno_flipbox_back .flipbox_button a i {
+            display: none;
+         }
+         .techno_flipbox .techno_flipbox_back .flipbox_title h3 {
+            padding-bottom: 16px;
+            padding-top: 0;
+            color: black;
+            margin-bottom: 0;
+         }
+         .techno_flipbox .techno_flipbox_font .flipbox_desc,
+         .techno_flipbox .techno_flipbox_back .flipbox_desc {
+            color: black;
+         }
+
+         .flipbox_area.top_feature.upper .techno_flipbox_font .icon {
+            font-size: 45px;
+            color: #0c5adb;
+            background: transparent;
+         }
+
+         /* Flipbox Hover Css */
+         .techno_flipbox:hover .techno_flipbox_font {
+            -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+         }
+         .techno_flipbox:hover .techno_flipbox_back {
+            -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+         }
+         .techno_flipbox .techno_flipbox_back .flipbox_button a:hover {
+            color: black;
+            border-color: #0c5adb;
+            background: #0c5adb;
+         }
+
+         .pages .techno_flipbox .techno_flipbox_font .flipbox_title h3 {
+            color: #444;
+         }
+         .pages .techno_flipbox_font .flipbox_desc p {
+            color: #666;
+         }
+         /*====================================================
+--<	Techno About Area Css -->
+======================================================*/
+      </style>
+   </head>
+   <body>
+      <div class="techno_flipbox mb-30">
+         <div class="techno_flipbox_font">
+            <div class="techno_flipbox_inner">
+               <div class="techno_flipbox_icon">
+                  <div class="icon">
+                     <i class="flaticon-bar-chart"></i>
+                  </div>
+               </div>
+               <div class="flipbox_title">
+                  <h3>Product Design</h3>
+               </div>
+               <div class="flipbox_desc">
+                  <p>Porem asum molor sit amet, consectetur adipiscing do miusmod tempor.</p>
+               </div>
+            </div>
+         </div>
+         <div class="techno_flipbox_back" style="background-image: url(assets/images/feature1.jpg)">
+            <div class="techno_flipbox_inner">
+               <div class="flipbox_title">
+                  <h3>24/7 Support</h3>
+               </div>
+               <div class="flipbox_desc">
+                  <p>Porem asum molor sit amet, consectetur adipiscing do miusmod tempor.</p>
+               </div>
+               <div class="flipbox_button">
+                  <a href="">Read More<i class="fa fa-angle-double-right"></i></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
